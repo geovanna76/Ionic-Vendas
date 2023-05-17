@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Venda </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-item-group >
+    <ion-item>
+      <ion-label>Digite o total da sua venda:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input type="number" [(ngModel)]="valorDigitado" value="valor" placeholder="24.000"></ion-input>
+    </ion-item>
+  </ion-item-group>
+
+
+
+
+    <ion-list >
+      <ion-item>
+        <ion-select placeholder="Forma de pagamento" [(ngModel)]="selectSelecionado">
+          <ion-select-option value="pix">Pix- desconto10%</ion-select-option>
+          <ion-select-option value="debito">Débito</ion-select-option>
+          <ion-select-option value="credito">Crédito- acrescimo10%</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button (click)="calculo()">Calcular</ion-button>
+
+    </ion-list>
+
+</ion-content>
